@@ -23,4 +23,11 @@ body {
     flex: 1;
     aspect-ratio: 1 / 1;
     border: 1px solid black;
+    transition-duration: 0.2s;
+}
+
+@media all and (hover: hover) {
+    .cell:hover {
+        background-color: black;
+    }
 }
