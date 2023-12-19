@@ -12,3 +12,7 @@ const createGrid = function() {
     container.appendChild(row);
     }
 }
+
+window.addEventListener("load", () => {
+    createGrid();
+})
