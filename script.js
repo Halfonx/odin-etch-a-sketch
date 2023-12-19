@@ -13,6 +13,6 @@ const createGrid = function() {
     }
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("load", () => { // To display the grid directly when the page is loaded
     createGrid();
 })
