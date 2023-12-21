@@ -7,6 +7,9 @@ const createGrid = function() {
         for (let j = 0; j < 16; j++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
+            cell.addEventListener('mouseover', () => {
+                cell.style.backgroundColor = "black";
+            });
             row.appendChild(cell);
         }
     container.appendChild(row);
