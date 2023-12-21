@@ -10,6 +10,9 @@ const createGrid = function() {
             cell.addEventListener('mouseover', () => {
                 cell.style.backgroundColor = "black";
             });
+            cell.addEventListener('mouseout', () => {
+                cell.style.backgroundColor = "white";
+            });
             row.appendChild(cell);
         }
     container.appendChild(row);
