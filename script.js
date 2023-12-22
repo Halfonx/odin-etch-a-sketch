@@ -1,4 +1,5 @@
 const container = document.querySelector('#container');
+const gridSizeButton = document.querySelector('#grid_size_button');
 
 const createGrid = function() {
     for (let i = 0; i < 16; i++) {
@@ -18,6 +19,10 @@ const createGrid = function() {
     container.appendChild(row);
     }
 }
+
+gridSizeButton.addEventListener('click', () => {
+    const gridSizeValue = prompt('Enter a grid size');
+})
 
 window.addEventListener("load", () => { // To display the grid directly when the page is loaded
     createGrid();
