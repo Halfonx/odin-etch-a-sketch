@@ -40,6 +40,7 @@ gridSizeButton.addEventListener('click', () => {
             container.appendChild(row);
         }
     }
+    container.innerHTML = "";
     createCustomGrid();
 })
 
