@@ -16,12 +16,31 @@ const createGrid = function() {
             });
             row.appendChild(cell);
         }
-    container.appendChild(row);
+        container.appendChild(row);
     }
 }
 
 gridSizeButton.addEventListener('click', () => {
     const gridSizeValue = prompt('Enter a grid size');
+    const createCustomGrid = function() {
+        for (let i = 0; i < gridSizeValue; i++) {
+            const row = document.createElement('div');
+            row.classList.add('row');
+            for (let j = 0; j < gridSizeValue; j++) {
+                const cell = document.createElement('div');
+                cell.classList.add('cell');
+                cell.addEventListener('mouseover', () => {
+                    cell.style.backgroundColor = 'black';
+                });
+                cell.addEventListener('mouseout', () => {
+                    cell.style.backgroundColor = 'white';
+                });
+                row.appendChild(cell);
+            }
+            container.appendChild(row);
+        }
+    }
+    createCustomGrid();
 })
 
 window.addEventListener("load", () => { // To display the grid directly when the page is loaded
