@@ -11,7 +11,8 @@ body {
     margin: 32px auto 0 auto;
 }
 
-#grid_size_button {
+#grid_size_button,
+#reset_grid_button {
     padding: 8px 16px;
 }
 

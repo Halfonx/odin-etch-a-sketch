@@ -1,5 +1,6 @@
 const container = document.querySelector('#container');
 const gridSizeButton = document.querySelector('#grid_size_button');
+const resetGrid = document.querySelector('#reset_grid_button');
 
 const createGrid = function() {
     for (let i = 0; i < 16; i++) {
@@ -48,6 +49,11 @@ gridSizeButton.addEventListener('click', () => {
         container.innerHTML = "";
         createCustomGrid();
     }
+})
+
+resetGrid.addEventListener('click', () => {
+    container.innerHTML = "";
+    createGrid();
 })
 
 window.addEventListener("load", () => { // To display the grid directly when the page is loaded
