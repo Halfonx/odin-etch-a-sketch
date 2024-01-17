@@ -8,12 +8,20 @@ body {
 
 #controls {
     width: fit-content;
+    height: 35px;;
     margin: 32px auto 0 auto;
 }
 
 #grid_size_button,
 #reset_grid_button {
     padding: 8px 16px;
+}
+
+#color-picker {
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    height: 35px;
 }
 
 #container {
