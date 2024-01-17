@@ -1,6 +1,12 @@
 const container = document.querySelector('#container');
 const gridSizeButton = document.querySelector('#grid_size_button');
 const resetGrid = document.querySelector('#reset_grid_button');
+const colorPicker = document.querySelector('#color-picker');
+let cellColor = "#000000";
+
+colorPicker.addEventListener('input', () => {
+    cellColor = colorPicker.value;
+})
 
 const createGrid = function() {
     for (let i = 0; i < 16; i++) {
@@ -10,7 +16,7 @@ const createGrid = function() {
             const cell = document.createElement('div');
             cell.classList.add('cell');
             cell.addEventListener('mouseover', () => {
-                cell.style.backgroundColor = "black";
+                cell.style.backgroundColor = cellColor;
             });
             cell.addEventListener('mouseout', () => {
                 cell.style.backgroundColor = "white";
@@ -36,7 +42,7 @@ gridSizeButton.addEventListener('click', () => {
                     const cell = document.createElement('div');
                     cell.classList.add('cell');
                     cell.addEventListener('mouseover', () => {
-                        cell.style.backgroundColor = 'black';
+                        cell.style.backgroundColor = cellColor;
                     });
                     cell.addEventListener('mouseout', () => {
                         cell.style.backgroundColor = 'white';
@@ -52,6 +58,8 @@ gridSizeButton.addEventListener('click', () => {
 })
 
 resetGrid.addEventListener('click', () => {
+    colorPicker.value = "#000000";
+    cellColor = colorPicker.value;
     container.innerHTML = "";
     createGrid();
 })
