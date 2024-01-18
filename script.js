@@ -15,11 +15,8 @@ const createGrid = function() {
         for (let j = 0; j < 16; j++) {
             const cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.addEventListener('mouseover', () => {
-                cell.style.backgroundColor = cellColor;
-            });
-            cell.addEventListener('mouseout', () => {
-                cell.style.backgroundColor = "white";
+            cell.addEventListener('click', () => {
+                cell.classList.add('colored')
             });
             row.appendChild(cell);
         }
@@ -41,11 +38,8 @@ gridSizeButton.addEventListener('click', () => {
                 for (let j = 0; j < gridSizeValue; j++) {
                     const cell = document.createElement('div');
                     cell.classList.add('cell');
-                    cell.addEventListener('mouseover', () => {
-                        cell.style.backgroundColor = cellColor;
-                    });
-                    cell.addEventListener('mouseout', () => {
-                        cell.style.backgroundColor = 'white';
+                    cell.addEventListener('click', () => {
+                        cell.classList.add('colored');
                     });
                     row.appendChild(cell);
                 }
