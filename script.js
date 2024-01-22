@@ -16,8 +16,8 @@ const createGrid = function() {
             const cell = document.createElement('div');
             cell.classList.add('cell');
             cell.addEventListener('click', () => {
-                cell.classList.add('colored')
-            });
+                cell.style.backgroundColor = cellColor;
+            })
             row.appendChild(cell);
         }
         container.appendChild(row);
